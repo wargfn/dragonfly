@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Salesman index{% endblock %}
+
+{% block body %}
+    <h1>Salesman index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Email</th>
+                <th>Cell</th>
+                <th>License</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for salesman in salesmen %}
+            <tr>
+                <td>{{ salesman.id }}</td>
+                <td>{{ salesman.name }}</td>
+                <td>{{ salesman.address }}</td>
+                <td>{{ salesman.city }}</td>
+                <td>{{ salesman.state }}</td>
+                <td>{{ salesman.zip }}</td>
+                <td>{{ salesman.email }}</td>
+                <td>{{ salesman.cell }}</td>
+                <td>{{ salesman.license }}</td>
+                <td>
+                    <a href="{{ path('salesman_show', {'id': salesman.id}) }}">show</a>
+                    <a href="{{ path('salesman_edit', {'id': salesman.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('salesman_new') }}">Create new</a>
+{% endblock %}
