@@ -3,12 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
         <title>{% block title %}Dragonfly Solutions{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <div id="wrapper">
+        {%  include 'navbar.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        </div>
+        <div class="navbar navbar-light navbar-expand-lg bg-light container-fluid">
+        {% include 'footer.html.twig' %}
+        </div>
     </body>
 </html>
 <script></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
