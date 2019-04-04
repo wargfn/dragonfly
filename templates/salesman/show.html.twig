@@ -48,7 +48,7 @@
 
     <a href="{{ path('salesman_index') }}">back to list</a>
 
-    <a href="{{ path('salesman_edit', {'id': salesman.id}) }}">edit</a>
+    <a href="{{ path('salesman_edit', {'id': salesman.id}) }} class="btn btn-warning" role="button"">edit</a>
 
     {{ include('salesman/_delete_form.html.twig') }}
 {% endblock %}

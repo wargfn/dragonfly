@@ -33,8 +33,8 @@
                 <td>{{ salesman.cell }}</td>
                 <td>{{ salesman.license }}</td>
                 <td>
-                    <a href="{{ path('salesman_show', {'id': salesman.id}) }}">show</a>
-                    <a href="{{ path('salesman_edit', {'id': salesman.id}) }}">edit</a>
+                    <a href="{{ path('salesman_show', {'id': salesman.id}) }}" class="btn btn-primary btn-sm" role="button">show</a>
+                    <a href="{{ path('salesman_edit', {'id': salesman.id}) }}" class="btn btn-warning" role="button">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -45,5 +45,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('salesman_new') }}">Create new</a>
+    <a href="{{ path('salesman_new') }}" class="btn btn-primary" role="button">Create new</a>
 {% endblock %}

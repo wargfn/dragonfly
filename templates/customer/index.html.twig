@@ -31,8 +31,8 @@
                 <td>{{ customer.email }}</td>
                 <td>{{ customer.phone }}</td>
                 <td>
-                    <a href="{{ path('customer_show', {'id': customer.id}) }}">show</a>
-                    <a href="{{ path('customer_edit', {'id': customer.id}) }}">edit</a>
+                    <a href="{{ path('customer_show', {'id': customer.id}) }}" class="btn btn-primary btn-sm" role="button">show</a>
+                    <a href="{{ path('customer_edit', {'id': customer.id}) }}" class="btn btn-warning btn-sm" role="button">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -43,5 +43,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('customer_new') }}">Create new</a>
+    <a href="{{ path('customer_new') }}" class="btn btn-primary" role="button">Create new</a>
 {% endblock %}

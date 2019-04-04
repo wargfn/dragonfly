@@ -10,7 +10,9 @@
     <body>
         <div id="wrapper">
         {%  include 'navbar.html.twig' %}
+        <div class="container">
         {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
         </div>
         <div class="navbar navbar-light navbar-expand-lg bg-light container-fluid">

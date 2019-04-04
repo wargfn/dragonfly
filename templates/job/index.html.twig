@@ -35,8 +35,8 @@
                 <td>{{ job.installDate ? job.installDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ job.completionDate ? job.completionDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('job_show', {'id': job.id}) }}">show</a>
-                    <a href="{{ path('job_edit', {'id': job.id}) }}">edit</a>
+                    <a href="{{ path('job_show', {'id': job.id}) }}" class="btn btn-primary btn-sm" role="button">show</a>
+                    <a href="{{ path('job_edit', {'id': job.id}) }}" class="btn btn-warning btn-sm" role="button">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -47,5 +47,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('job_new') }}">Create new</a>
+    <a href="{{ path('job_new') }}" class="btn btn-primary" role="button">Create new</a>
 {% endblock %}
